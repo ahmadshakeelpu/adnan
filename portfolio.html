@@ -1,0 +1,1842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Muhammad Adnan – Physics Teacher (Cambridge Syllabus, Classes 11–12). BS Physics (Hons) graduate of GCUF Faisalabad. 2 years at Punjab College Sillanwali. In-person & online.">
+<meta name="keywords" content="physics teacher, GCSE physics, A-level physics, online physics classes, science tutor, Pakistan physics teacher">
+<meta name="author" content="Muhammad Adnan">
+<title>Muhammad Adnan · Physics Teacher</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+
+<style>
+  /* ── Design Tokens ─────────────────────────────────── */
+  :root {
+    --ink:       #0e1117;
+    --ink-2:     #3a3f52;
+    --ink-3:     #6b7188;
+    --paper:     #faf9f6;
+    --paper-2:   #f2f0eb;
+    --paper-3:   #e8e5de;
+    --accent:    #1a4a6b;      /* deep midnight blue */
+    --accent-2:  #d4600a;      /* amber-orange */
+    --accent-3:  #1a7a5e;      /* teal green */
+    --glow:      rgba(26,74,107,0.12);
+    --ff-head:   'Fraunces', Georgia, serif;
+    --ff-body:   'DM Sans', system-ui, sans-serif;
+    --ff-mono:   'DM Mono', monospace;
+    --max-w:     1140px;
+    --nav-h:     68px;
+    --radius:    12px;
+    --radius-sm: 6px;
+    --shadow:    0 2px 24px rgba(14,17,23,0.08);
+    --shadow-lg: 0 8px 48px rgba(14,17,23,0.13);
+    --trans:     all 0.25s cubic-bezier(.4,0,.2,1);
+  }
+
+  /* ── Reset ─────────────────────────────────────────── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; font-size: 16px; }
+  body {
+    font-family: var(--ff-body);
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+  ul { list-style: none; }
+
+  /* ── Typography ─────────────────────────────────────── */
+  h1, h2, h3, h4 { font-family: var(--ff-head); font-weight: 400; line-height: 1.15; }
+  h1 { font-size: clamp(2.4rem, 6vw, 4.2rem); }
+  h2 { font-size: clamp(1.7rem, 3.5vw, 2.6rem); }
+  h3 { font-size: clamp(1.2rem, 2vw, 1.5rem); }
+  p  { color: var(--ink-2); }
+  .lead { font-size: 1.15rem; line-height: 1.8; }
+  .mono { font-family: var(--ff-mono); font-size: 0.82rem; letter-spacing: .04em; }
+
+  /* ── Utility ─────────────────────────────────────────── */
+  .container  { max-width: var(--max-w); margin: 0 auto; padding: 0 2rem; }
+  .section    { padding: 7rem 0; }
+  .section-sm { padding: 4rem 0; }
+  .tag {
+    display: inline-block;
+    padding: .25rem .75rem;
+    border-radius: 20px;
+    font-size: .8rem;
+    font-weight: 500;
+    letter-spacing: .04em;
+    border: 1.5px solid;
+  }
+  .tag-blue  { color: var(--accent);   border-color: rgba(26,74,107,.3); background: rgba(26,74,107,.06); }
+  .tag-amber { color: var(--accent-2); border-color: rgba(212,96,10,.3); background: rgba(212,96,10,.06); }
+  .tag-teal  { color: var(--accent-3); border-color: rgba(26,122,94,.3); background: rgba(26,122,94,.06); }
+  .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+  .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
+  .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.25rem; }
+  .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
+
+  /* ── Navigation ─────────────────────────────────────── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    height: var(--nav-h);
+    background: rgba(250,249,246,.92);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--paper-3);
+    display: flex; align-items: center;
+  }
+  .nav-inner {
+    max-width: var(--max-w); margin: 0 auto; padding: 0 2rem;
+    width: 100%; display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-logo {
+    font-family: var(--ff-head);
+    font-size: 1.2rem;
+    color: var(--accent);
+    letter-spacing: -.01em;
+  }
+  .nav-logo span { font-style: italic; }
+  .nav-links {
+    display: flex; align-items: center; gap: 2.2rem;
+  }
+  .nav-links a {
+    font-size: .88rem;
+    font-weight: 500;
+    color: var(--ink-2);
+    letter-spacing: .01em;
+    transition: var(--trans);
+    position: relative;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute; left: 0; bottom: -4px;
+    width: 0; height: 1.5px;
+    background: var(--accent);
+    transition: width .25s ease;
+  }
+  .nav-links a:hover { color: var(--accent); }
+  .nav-links a:hover::after { width: 100%; }
+  .nav-cta {
+    padding: .55rem 1.3rem;
+    border-radius: 30px;
+    background: var(--accent);
+    color: #fff !important;
+    font-size: .85rem !important;
+    font-weight: 500 !important;
+    transition: var(--trans);
+  }
+  .nav-cta:hover { background: #0e2e44; }
+  .nav-cta::after { display: none !important; }
+  .hamburger { display: none; background: none; border: none; cursor: pointer; padding: .5rem; }
+  .hamburger span {
+    display: block; width: 22px; height: 1.5px;
+    background: var(--ink); margin: 5px 0; transition: var(--trans);
+  }
+  .mobile-nav {
+    display: none;
+    position: fixed; top: var(--nav-h); left: 0; right: 0; bottom: 0;
+    background: var(--paper);
+    z-index: 99;
+    padding: 2rem;
+    flex-direction: column; gap: 1.5rem;
+  }
+  .mobile-nav.open { display: flex; }
+  .mobile-nav a { font-size: 1.2rem; font-family: var(--ff-head); color: var(--ink); }
+
+  /* ── Hero ────────────────────────────────────────────── */
+  #home {
+    min-height: 100vh;
+    display: flex; align-items: center;
+    padding-top: var(--nav-h);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0; z-index: 0;
+    background:
+      radial-gradient(ellipse 70% 60% at 70% 40%, rgba(26,74,107,.07) 0%, transparent 70%),
+      radial-gradient(ellipse 50% 50% at 20% 80%, rgba(26,122,94,.05) 0%, transparent 60%);
+  }
+  .hero-grid {
+    position: absolute; inset: 0; z-index: 0; opacity: .35;
+    background-image:
+      linear-gradient(var(--paper-3) 1px, transparent 1px),
+      linear-gradient(90deg, var(--paper-3) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: linear-gradient(to bottom, transparent, rgba(0,0,0,.6) 30%, rgba(0,0,0,.6) 70%, transparent);
+  }
+  .hero-inner {
+    position: relative; z-index: 1;
+    max-width: var(--max-w); margin: 0 auto; padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem; align-items: center;
+    width: 100%;
+  }
+  .hero-eyebrow {
+    font-family: var(--ff-mono);
+    font-size: .8rem;
+    color: var(--accent-2);
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+    display: flex; align-items: center; gap: .6rem;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 28px; height: 1.5px;
+    background: var(--accent-2);
+  }
+  .hero-title {
+    margin-bottom: 1.5rem;
+    color: var(--ink);
+  }
+  .hero-title em { color: var(--accent); font-style: italic; }
+  .hero-sub {
+    font-size: 1.1rem;
+    color: var(--ink-2);
+    margin-bottom: 2.5rem;
+    max-width: 460px;
+    line-height: 1.8;
+  }
+  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; gap: .5rem;
+    padding: .75rem 1.8rem;
+    border-radius: 30px;
+    font-weight: 500; font-size: .92rem;
+    transition: var(--trans);
+    cursor: pointer; border: none;
+  }
+  .btn-primary {
+    background: var(--accent); color: #fff;
+  }
+  .btn-primary:hover { background: #0e2e44; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(26,74,107,.3); }
+  .btn-outline {
+    background: transparent; color: var(--accent);
+    border: 1.5px solid rgba(26,74,107,.3);
+  }
+  .btn-outline:hover { border-color: var(--accent); background: rgba(26,74,107,.05); transform: translateY(-1px); }
+  .hero-stats {
+    display: flex; gap: 2.5rem; margin-top: 3.5rem;
+  }
+  .hero-stat-num {
+    font-family: var(--ff-head);
+    font-size: 2.2rem;
+    color: var(--accent);
+    line-height: 1;
+  }
+  .hero-stat-label {
+    font-size: .82rem;
+    color: var(--ink-3);
+    margin-top: .3rem;
+    font-weight: 500;
+  }
+  .hero-visual {
+    display: flex; justify-content: center; align-items: center;
+  }
+  .avatar-frame {
+    position: relative;
+    width: 360px; height: 440px;
+  }
+  .avatar-bg {
+    position: absolute;
+    top: 20px; right: -10px;
+    width: 320px; height: 400px;
+    border-radius: 60% 40% 55% 45% / 50% 45% 55% 50%;
+    background: linear-gradient(135deg, rgba(26,74,107,.12), rgba(26,122,94,.08));
+    border: 2px solid rgba(26,74,107,.15);
+  }
+  .avatar-card {
+    position: absolute; top: 0; left: 0;
+    width: 320px; height: 400px;
+    border-radius: 60% 40% 55% 45% / 50% 45% 55% 50%;
+    background: var(--paper-2);
+    border: 2px solid var(--paper-3);
+    overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .avatar-initials {
+    font-family: var(--ff-head);
+    font-size: 7rem;
+    color: rgba(26,74,107,.18);
+    font-weight: 300;
+    letter-spacing: -.05em;
+    line-height: 1;
+    user-select: none;
+  }
+  .avatar-badge {
+    position: absolute;
+    bottom: 40px; right: 0;
+    background: var(--paper);
+    border: 1px solid var(--paper-3);
+    border-radius: var(--radius);
+    padding: .8rem 1.2rem;
+    box-shadow: var(--shadow);
+    display: flex; align-items: center; gap: .7rem;
+  }
+  .badge-icon {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: rgba(26,74,107,.1);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem;
+  }
+  .badge-text { font-size: .8rem; }
+  .badge-text strong { display: block; color: var(--ink); font-weight: 500; }
+  .badge-text span { color: var(--ink-3); }
+  .float-chip {
+    position: absolute;
+    top: 60px; right: -14px;
+    background: var(--accent);
+    color: #fff;
+    padding: .45rem 1rem;
+    border-radius: 20px;
+    font-size: .78rem;
+    font-weight: 500;
+    letter-spacing: .02em;
+  }
+
+  /* ── Section headers ─────────────────────────────────── */
+  .section-header { margin-bottom: 3.5rem; }
+  .section-header .eyebrow {
+    font-family: var(--ff-mono);
+    font-size: .78rem;
+    color: var(--accent-2);
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    margin-bottom: .7rem;
+    display: flex; align-items: center; gap: .5rem;
+  }
+  .section-header .eyebrow::before {
+    content: '';
+    display: block;
+    width: 20px; height: 1.5px;
+    background: var(--accent-2);
+  }
+  .section-header h2 { margin-bottom: 1rem; }
+  .section-header p { font-size: 1.05rem; max-width: 560px; }
+
+  /* ── About ───────────────────────────────────────────── */
+  #about { background: var(--paper-2); }
+  .about-inner { display: grid; grid-template-columns: 1fr 1.5fr; gap: 5rem; align-items: start; }
+  .about-sidebar {}
+  .about-photo-placeholder {
+    width: 100%;
+    aspect-ratio: 3/4;
+    background: var(--paper-3);
+    border-radius: var(--radius);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--ff-head);
+    font-size: 5rem;
+    color: rgba(26,74,107,.2);
+    font-weight: 300;
+    border: 1px solid var(--paper-3);
+    margin-bottom: 1.5rem;
+  }
+  .credentials li {
+    padding: .6rem 0;
+    border-bottom: 1px solid var(--paper-3);
+    display: flex; gap: .8rem; align-items: flex-start;
+    font-size: .9rem; color: var(--ink-2);
+  }
+  .credentials li .cred-icon { font-size: 1rem; flex-shrink: 0; margin-top: .1rem; }
+  .about-content .intro {
+    font-size: 1.35rem;
+    font-family: var(--ff-head);
+    font-weight: 300;
+    color: var(--ink);
+    line-height: 1.55;
+    margin-bottom: 1.5rem;
+  }
+  .about-content .intro em { color: var(--accent); font-style: italic; }
+  .about-content p { margin-bottom: 1.2rem; }
+  .values-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2.5rem; }
+  .value-card {
+    padding: 1.2rem;
+    background: var(--paper);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--paper-3);
+  }
+  .value-icon { font-size: 1.4rem; margin-bottom: .5rem; }
+  .value-card h4 { font-size: .95rem; margin-bottom: .3rem; font-family: var(--ff-body); font-weight: 500; }
+  .value-card p { font-size: .85rem; color: var(--ink-3); }
+
+  /* ── Teaching Philosophy ─────────────────────────────── */
+  #philosophy { background: var(--accent); color: #fff; }
+  #philosophy .section-header .eyebrow { color: rgba(255,255,255,.6); }
+  #philosophy .section-header .eyebrow::before { background: rgba(255,255,255,.4); }
+  #philosophy .section-header h2 { color: #fff; }
+  #philosophy .section-header p { color: rgba(255,255,255,.75); }
+  .philosophy-quote {
+    font-family: var(--ff-head);
+    font-size: clamp(1.3rem, 2.5vw, 1.9rem);
+    font-style: italic;
+    color: rgba(255,255,255,.9);
+    line-height: 1.6;
+    padding: 2rem 2.5rem;
+    border-left: 3px solid rgba(255,255,255,.35);
+    margin-bottom: 3rem;
+  }
+  .pillar-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; }
+  .pillar-card {
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: var(--radius);
+    padding: 1.8rem;
+  }
+  .pillar-num {
+    font-family: var(--ff-mono);
+    font-size: .75rem;
+    color: rgba(255,255,255,.4);
+    letter-spacing: .1em;
+    margin-bottom: .8rem;
+  }
+  .pillar-card h3 { color: #fff; font-size: 1.1rem; margin-bottom: .6rem; }
+  .pillar-card p { color: rgba(255,255,255,.7); font-size: .9rem; }
+
+  /* ── Courses ─────────────────────────────────────────── */
+  #courses { background: var(--paper); }
+  .course-card {
+    background: var(--paper-2);
+    border: 1px solid var(--paper-3);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: var(--trans);
+  }
+  .course-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+  .course-head {
+    padding: 1.8rem;
+    border-bottom: 1px solid var(--paper-3);
+    position: relative;
+  }
+  .course-level {
+    display: inline-block;
+    padding: .2rem .65rem;
+    border-radius: 20px;
+    font-size: .73rem;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    margin-bottom: .9rem;
+  }
+  .level-gcse  { background: rgba(26,74,107,.1); color: var(--accent); }
+  .level-alevel { background: rgba(212,96,10,.1); color: var(--accent-2); }
+  .level-online { background: rgba(26,122,94,.1); color: var(--accent-3); }
+  .course-head h3 { margin-bottom: .3rem; font-size: 1.3rem; }
+  .course-head .course-sub { font-size: .9rem; color: var(--ink-3); }
+  .course-body { padding: 1.5rem 1.8rem; }
+  .course-topics li {
+    font-size: .88rem; color: var(--ink-2);
+    padding: .35rem 0;
+    border-bottom: 1px solid var(--paper-3);
+    display: flex; align-items: center; gap: .6rem;
+  }
+  .course-topics li::before { content: '→'; color: var(--accent-3); font-size: .8rem; flex-shrink: 0; }
+  .course-meta {
+    display: flex; gap: 1rem; flex-wrap: wrap;
+    margin-top: 1.2rem; padding-top: 1.2rem;
+    border-top: 1px solid var(--paper-3);
+  }
+  .course-meta-item { display: flex; align-items: center; gap: .4rem; font-size: .82rem; color: var(--ink-3); }
+
+  /* ── Resources / Syllabus ────────────────────────────── */
+  #resources { background: var(--paper-2); }
+  .resource-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.25rem; }
+  .resource-card {
+    background: var(--paper);
+    border: 1px solid var(--paper-3);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    transition: var(--trans);
+    cursor: pointer;
+    display: flex; flex-direction: column; gap: .7rem;
+  }
+  .resource-card:hover { border-color: rgba(26,74,107,.3); box-shadow: 0 4px 20px var(--glow); }
+  .resource-icon {
+    width: 44px; height: 44px;
+    border-radius: 10px;
+    background: rgba(26,74,107,.08);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.3rem;
+  }
+  .resource-card h4 { font-size: .98rem; font-family: var(--ff-body); font-weight: 500; }
+  .resource-card p { font-size: .83rem; color: var(--ink-3); flex-grow: 1; }
+  .resource-card .download-link {
+    font-size: .8rem; color: var(--accent);
+    font-weight: 500;
+    display: flex; align-items: center; gap: .3rem;
+    margin-top: .3rem;
+  }
+  .resource-tabs {
+    display: flex; gap: .6rem; flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+  .rtab {
+    padding: .45rem 1.1rem;
+    border-radius: 20px;
+    font-size: .85rem;
+    font-weight: 500;
+    border: 1.5px solid var(--paper-3);
+    background: var(--paper);
+    color: var(--ink-2);
+    cursor: pointer;
+    transition: var(--trans);
+  }
+  .rtab.active, .rtab:hover {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+  }
+
+  /* ── Online Classes ──────────────────────────────────── */
+  #online { background: var(--paper); }
+  .online-split { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+  .platform-list li {
+    display: flex; align-items: flex-start; gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--paper-3);
+  }
+  .platform-icon {
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    background: var(--paper-2);
+    border: 1px solid var(--paper-3);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+  }
+  .platform-list h4 { font-size: .95rem; font-family: var(--ff-body); font-weight: 500; margin-bottom: .2rem; }
+  .platform-list p { font-size: .83rem; color: var(--ink-3); }
+  .tech-stack { margin-top: 2rem; }
+  .tech-stack h4 { font-size: .9rem; font-weight: 500; margin-bottom: 1rem; color: var(--ink-2); }
+  .tech-pills { display: flex; flex-wrap: wrap; gap: .5rem; }
+  .tech-pill {
+    padding: .3rem .85rem;
+    border-radius: 20px;
+    font-size: .8rem;
+    font-weight: 500;
+    background: var(--paper-2);
+    border: 1px solid var(--paper-3);
+    color: var(--ink-2);
+  }
+  .demo-card {
+    background: var(--accent);
+    border-radius: var(--radius);
+    padding: 2rem;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+  .demo-card::before {
+    content: '';
+    position: absolute; top: -40px; right: -40px;
+    width: 180px; height: 180px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.06);
+  }
+  .demo-card h3 { font-size: 1.4rem; color: #fff; margin-bottom: .7rem; }
+  .demo-card p { color: rgba(255,255,255,.8); font-size: .9rem; margin-bottom: 1.5rem; }
+  .demo-btn {
+    display: inline-flex; align-items: center; gap: .5rem;
+    padding: .65rem 1.4rem;
+    background: rgba(255,255,255,.15);
+    border: 1px solid rgba(255,255,255,.25);
+    border-radius: 25px;
+    color: #fff;
+    font-size: .88rem;
+    font-weight: 500;
+    transition: var(--trans);
+    cursor: pointer;
+  }
+  .demo-btn:hover { background: rgba(255,255,255,.25); }
+  .trial-badge {
+    display: inline-block;
+    background: var(--accent-2);
+    color: #fff;
+    padding: .25rem .7rem;
+    border-radius: 20px;
+    font-size: .75rem;
+    font-weight: 600;
+    letter-spacing: .04em;
+    margin-bottom: 1rem;
+  }
+
+  /* ── Schedule ────────────────────────────────────────── */
+  #schedule { background: var(--paper-2); }
+  .schedule-table { width: 100%; border-collapse: collapse; }
+  .schedule-table th, .schedule-table td {
+    padding: .9rem 1.2rem;
+    text-align: left;
+    border-bottom: 1px solid var(--paper-3);
+    font-size: .9rem;
+  }
+  .schedule-table th {
+    font-size: .78rem;
+    font-weight: 600;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    background: var(--paper-3);
+  }
+  .schedule-table tr:hover td { background: rgba(26,74,107,.03); }
+  .slot-badge {
+    display: inline-block;
+    padding: .2rem .6rem;
+    border-radius: 4px;
+    font-size: .78rem;
+    font-weight: 600;
+  }
+  .slot-open   { background: rgba(26,122,94,.1); color: var(--accent-3); }
+  .slot-full   { background: rgba(212,96,10,.1); color: var(--accent-2); }
+  .slot-online { background: rgba(26,74,107,.1); color: var(--accent); }
+  .schedule-note {
+    margin-top: 1.5rem; padding: 1.2rem 1.5rem;
+    background: rgba(26,74,107,.05);
+    border: 1px solid rgba(26,74,107,.12);
+    border-radius: var(--radius-sm);
+    font-size: .88rem; color: var(--ink-2);
+  }
+
+  /* ── Blog ────────────────────────────────────────────── */
+  #blog { background: var(--paper); }
+  .article-card {
+    background: var(--paper-2);
+    border: 1px solid var(--paper-3);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: var(--trans);
+  }
+  .article-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+  .article-thumb {
+    height: 170px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 3.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .thumb-waves { background: linear-gradient(135deg, rgba(26,74,107,.08), rgba(26,122,94,.06)); }
+  .thumb-atom  { background: linear-gradient(135deg, rgba(212,96,10,.08), rgba(26,74,107,.06)); }
+  .thumb-lab   { background: linear-gradient(135deg, rgba(26,122,94,.08), rgba(212,96,10,.06)); }
+  .article-body { padding: 1.5rem; }
+  .article-meta { font-size: .78rem; color: var(--ink-3); margin-bottom: .7rem; display: flex; gap: 1rem; }
+  .article-body h3 { font-size: 1.1rem; margin-bottom: .6rem; line-height: 1.35; }
+  .article-body p { font-size: .88rem; color: var(--ink-2); margin-bottom: 1rem; }
+  .read-more {
+    font-size: .83rem; color: var(--accent); font-weight: 500;
+    display: flex; align-items: center; gap: .3rem;
+    transition: var(--trans);
+  }
+  .read-more:hover { gap: .6rem; }
+
+  /* ── Testimonials ────────────────────────────────────── */
+  #testimonials { background: var(--paper-2); }
+  .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+  .testimonial-card {
+    background: var(--paper);
+    border: 1px solid var(--paper-3);
+    border-radius: var(--radius);
+    padding: 1.8rem;
+    transition: var(--trans);
+  }
+  .testimonial-card:hover { box-shadow: var(--shadow); }
+  .stars { color: #f59e0b; font-size: 1rem; letter-spacing: .1em; margin-bottom: 1rem; }
+  .testimonial-text { font-size: .93rem; color: var(--ink-2); line-height: 1.7; margin-bottom: 1.3rem; font-style: italic; }
+  .tester-info { display: flex; align-items: center; gap: .8rem; }
+  .tester-avatar {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: rgba(26,74,107,.1);
+    display: flex; align-items: center; justify-content: center;
+    font-size: .78rem; font-weight: 600; color: var(--accent);
+    font-family: var(--ff-body);
+    flex-shrink: 0;
+  }
+  .tester-name { font-size: .88rem; font-weight: 500; }
+  .tester-role { font-size: .78rem; color: var(--ink-3); }
+
+  /* ── Contact ─────────────────────────────────────────── */
+  #contact { background: var(--paper); }
+  .contact-split { display: grid; grid-template-columns: 1fr 1.3fr; gap: 4rem; align-items: start; }
+  .contact-info li {
+    display: flex; align-items: flex-start; gap: 1rem;
+    padding: 1.1rem 0; border-bottom: 1px solid var(--paper-3);
+  }
+  .contact-icon {
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    background: rgba(26,74,107,.08);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem; flex-shrink: 0;
+  }
+  .contact-info h4 { font-size: .88rem; font-weight: 500; color: var(--ink-3); margin-bottom: .15rem; }
+  .contact-info a, .contact-info p { font-size: .95rem; color: var(--ink); }
+  .contact-form {}
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+  .form-group { margin-bottom: 1rem; }
+  .form-group label { display: block; font-size: .83rem; font-weight: 500; color: var(--ink-2); margin-bottom: .4rem; }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: .8rem 1rem;
+    background: var(--paper-2);
+    border: 1.5px solid var(--paper-3);
+    border-radius: var(--radius-sm);
+    font-family: var(--ff-body);
+    font-size: .9rem;
+    color: var(--ink);
+    transition: var(--trans);
+    outline: none;
+    resize: vertical;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--glow); }
+  .form-group textarea { min-height: 130px; }
+  .form-submit {
+    width: 100%;
+    padding: .9rem;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-family: var(--ff-body);
+    font-size: .95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--trans);
+  }
+  .form-submit:hover { background: #0e2e44; }
+
+  /* ── Footer ──────────────────────────────────────────── */
+  footer {
+    background: var(--ink);
+    color: rgba(255,255,255,.7);
+    padding: 4rem 0 2rem;
+  }
+  .footer-inner {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 3rem; margin-bottom: 3rem;
+  }
+  .footer-brand .logo {
+    font-family: var(--ff-head);
+    font-size: 1.3rem;
+    color: #fff;
+    margin-bottom: .8rem;
+  }
+  .footer-brand .logo span { font-style: italic; }
+  .footer-brand p { font-size: .87rem; line-height: 1.7; }
+  .footer-col h4 { font-size: .85rem; font-weight: 600; color: #fff; letter-spacing: .05em; text-transform: uppercase; margin-bottom: 1.2rem; }
+  .footer-col li { margin-bottom: .6rem; }
+  .footer-col a { font-size: .87rem; color: rgba(255,255,255,.6); transition: color .2s; }
+  .footer-col a:hover { color: #fff; }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,.1);
+    padding-top: 1.5rem;
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+  }
+  .footer-bottom p { font-size: .82rem; }
+  .footer-socials { display: flex; gap: .7rem; }
+  .social-btn {
+    width: 34px; height: 34px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.12);
+    display: flex; align-items: center; justify-content: center;
+    color: rgba(255,255,255,.7);
+    font-size: .85rem;
+    transition: var(--trans);
+  }
+  .social-btn:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+  /* ── Sitemap section ─────────────────────────────────── */
+  #sitemap { background: var(--paper-2); padding: 5rem 0; }
+  .sitemap-tree {
+    display: flex; flex-wrap: wrap; gap: 1rem;
+    align-items: flex-start;
+  }
+  .sm-node {
+    background: var(--paper);
+    border: 1.5px solid var(--paper-3);
+    border-radius: var(--radius-sm);
+    padding: .6rem 1rem;
+    font-size: .85rem;
+    color: var(--ink-2);
+    font-weight: 500;
+  }
+  .sm-root {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+    font-weight: 600;
+  }
+  .sm-connector {
+    display: flex; align-items: center;
+    font-size: .8rem; color: var(--ink-3);
+  }
+
+  /* ── Content Calendar ────────────────────────────────── */
+  .calendar-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+  .cal-card {
+    background: var(--paper);
+    border: 1px solid var(--paper-3);
+    border-radius: var(--radius-sm);
+    padding: 1.2rem;
+  }
+  .cal-month {
+    font-family: var(--ff-mono);
+    font-size: .72rem;
+    color: var(--accent-2);
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    margin-bottom: .6rem;
+  }
+  .cal-card h4 { font-size: .92rem; font-family: var(--ff-body); font-weight: 500; margin-bottom: .3rem; }
+  .cal-card p { font-size: .82rem; color: var(--ink-3); }
+
+  /* ── README ──────────────────────────────────────────── */
+  #readme { background: var(--ink); color: rgba(255,255,255,.85); padding: 5rem 0; }
+  #readme h2 { color: #fff; margin-bottom: 2rem; }
+  .readme-block {
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: var(--radius);
+    padding: 2rem;
+    font-family: var(--ff-mono);
+    font-size: .83rem;
+    line-height: 2;
+    color: rgba(255,255,255,.8);
+    white-space: pre-wrap;
+  }
+  .readme-block .comment { color: rgba(255,255,255,.4); }
+  .readme-block .key { color: #93c5fd; }
+  .readme-block .val { color: #86efac; }
+
+  /* ── Scroll animations ───────────────────────────────── */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity .6s ease, transform .6s ease;
+  }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+  /* ── Responsive ──────────────────────────────────────── */
+  @media (max-width: 900px) {
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero-visual { display: none; }
+    .about-inner { grid-template-columns: 1fr; }
+    .online-split { grid-template-columns: 1fr; }
+    .contact-split { grid-template-columns: 1fr; }
+    .footer-inner { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 680px) {
+    .nav-links { display: none; }
+    .hamburger { display: block; }
+    .section { padding: 4.5rem 0; }
+    .hero-stats { gap: 1.5rem; }
+    .form-row { grid-template-columns: 1fr; }
+    .footer-inner { grid-template-columns: 1fr; }
+    .values-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── Navigation ──────────────────────────────────────── -->
+<nav role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">Muhammad <span>Adnan</span></a>
+    <ul class="nav-links" role="list">
+      <li><a href="#about">About</a></li>
+      <li><a href="#courses">Courses</a></li>
+      <li><a href="#resources">Resources</a></li>
+      <li><a href="#online">Online Classes</a></li>
+      <li><a href="#blog">Articles</a></li>
+      <li><a href="#contact" class="nav-cta">Book a Trial</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Toggle menu" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile nav -->
+<div class="mobile-nav" id="mobileNav" role="navigation" aria-label="Mobile navigation">
+  <a href="#about" onclick="toggleMenu()">About</a>
+  <a href="#philosophy" onclick="toggleMenu()">Philosophy</a>
+  <a href="#courses" onclick="toggleMenu()">Courses</a>
+  <a href="#resources" onclick="toggleMenu()">Resources</a>
+  <a href="#online" onclick="toggleMenu()">Online Classes</a>
+  <a href="#schedule" onclick="toggleMenu()">Schedule</a>
+  <a href="#blog" onclick="toggleMenu()">Articles</a>
+  <a href="#testimonials" onclick="toggleMenu()">Testimonials</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+</div>
+
+<!-- ── Hero ────────────────────────────────────────────── -->
+<section id="home" aria-label="Introduction">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-eyebrow">Physics Educator · Cambridge Syllabus · Class 11 &amp; 12</div>
+      <h1 class="hero-title">
+        Making Physics<br>
+        <em>click</em> for every student
+      </h1>
+      <p class="hero-sub">
+        Physics teacher covering Classes 11–12 on the Cambridge syllabus. BS Physics (Hons) graduate of GCUF Faisalabad · 2 years at Punjab College Sillanwali · In-person &amp; online.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">📅 Book a Trial Class</a>
+        <a href="#courses" class="btn btn-outline">View Courses →</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-num">2+</div>
+          <div class="hero-stat-label">Years teaching</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">Class</div>
+          <div class="hero-stat-label">11 &amp; 12 specialist</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">GCUF</div>
+          <div class="hero-stat-label">BS Physics (Hons) 2023</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="avatar-frame">
+        <div class="avatar-bg"></div>
+        <div class="avatar-card">
+          <div class="avatar-initials">MA</div>
+        </div>
+        <div class="float-chip">🎓 BS Physics (Hons) · GCUF</div>
+        <div class="avatar-badge">
+          <div class="badge-icon">⚛️</div>
+          <div class="badge-text">
+            <strong>GCSE &amp; A-Level</strong>
+            <span>Cambridge Syllabus</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── About ────────────────────────────────────────────── -->
+<section id="about" class="section" aria-labelledby="about-heading">
+  <div class="container">
+    <div class="about-inner">
+      <div class="about-sidebar fade-in">
+        <div class="about-photo-placeholder" aria-hidden="true">MA</div>
+        <ul class="credentials" aria-label="Qualifications">
+          <li><span class="cred-icon">🎓</span><span><strong>BS Physics (Hons)</strong> — Government College University Faisalabad (GCUF), 2023 <em style="color:var(--ink-3); font-size:.82rem;">(equivalent to MSc)</em></span></li>
+          <li><span class="cred-icon">🏫</span><span><strong>Punjab College Sillanwali</strong> — Physics Teacher, Classes 11 &amp; 12 (2023–2025)</span></li>
+          <li><span class="cred-icon">💻</span><span><strong>Online Instructor</strong> — Concurrent with in-person teaching</span></li>
+          <li><span class="cred-icon">📖</span><span><strong>Cambridge Syllabus</strong> — Teaching AS &amp; A2 Physics (9702)</span></li>
+          <li><span class="cred-icon">📍</span><span>Sillanwali / Sargodha region — Online worldwide</span></li>
+        </ul>
+      </div>
+      <div class="about-content fade-in">
+        <div class="section-header">
+          <div class="eyebrow">About Me</div>
+          <h2 id="about-heading">A scientist who loves teaching</h2>
+        </div>
+        <p class="intro">
+          I believe every student has a <em>moment</em> when physics transforms from confusing symbols into a language for understanding reality. My job is to engineer that moment.
+        </p>
+        <p>I graduated with a BS (Hons) in Physics from Government College University Faisalabad (GCUF) in 2023. Since then I have been teaching Physics to Class 11 and 12 students at Punjab College Sillanwali, running both in-person classes and online sessions simultaneously.</p>
+        <p>Although I am not B.Ed qualified or Cambridge certified, I teach the Cambridge AS &amp; A-Level Physics syllabus (9702) in full — covering all topics, past-paper practice, and exam technique that the syllabus demands. My focus is on building genuine understanding, not just rote exam preparation.</p>
+        <p>In two years of teaching I have worked with students across a range of abilities and helped many make significant improvements in their exam performance. I continue to develop my own subject knowledge and teaching skills every day.</p>
+        <div class="values-grid" role="list">
+          <div class="value-card" role="listitem">
+            <div class="value-icon">🔭</div>
+            <h4>Conceptual Depth</h4>
+            <p>Understanding before memorisation, always.</p>
+          </div>
+          <div class="value-card" role="listitem">
+            <div class="value-icon">📊</div>
+            <h4>Data-Driven</h4>
+            <p>I track each student's progress and adapt weekly.</p>
+          </div>
+          <div class="value-card" role="listitem">
+            <div class="value-icon">🤝</div>
+            <h4>Inclusive</h4>
+            <p>No student is "bad at physics" — only underserved.</p>
+          </div>
+          <div class="value-card" role="listitem">
+            <div class="value-icon">🌐</div>
+            <h4>Globally Minded</h4>
+            <p>Cambridge standards, local context.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Teaching Philosophy ──────────────────────────────── -->
+<section id="philosophy" class="section" aria-labelledby="phil-heading">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="eyebrow">Teaching Philosophy</div>
+      <h2 id="phil-heading">How I think about physics education</h2>
+      <p>Five principles that shape every lesson I design and deliver.</p>
+    </div>
+    <blockquote class="philosophy-quote fade-in">
+      "Physics is not a collection of facts to memorise — it is a way of asking questions that nature can actually answer."
+    </blockquote>
+    <div class="pillar-grid fade-in">
+      <div class="pillar-card">
+        <div class="pillar-num">01</div>
+        <h3>Build mental models first</h3>
+        <p>Equations describe reality — they don't replace understanding it. I introduce every topic with a concrete image or analogy before introducing symbols.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-num">02</div>
+        <h3>Questions over answers</h3>
+        <p>Lessons are designed to provoke curiosity. I celebrate a student's great question more loudly than a correct answer.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-num">03</div>
+        <h3>Deliberate practice</h3>
+        <p>Past-paper work is strategic, not random. Each problem set targets a specific misconception identified from formative assessment.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-num">04</div>
+        <h3>Low-stakes experimentation</h3>
+        <p>Students must feel safe to be wrong. My classroom culture treats errors as data — the most useful kind.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-num">05</div>
+        <h3>Accessibility by design</h3>
+        <p>Materials are multilingual (English/Urdu), screen-reader friendly, and usable on low-bandwidth connections.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Courses ──────────────────────────────────────────── -->
+<section id="courses" class="section" aria-labelledby="courses-heading">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="eyebrow">Courses</div>
+      <h2 id="courses-heading">What I teach</h2>
+      <p>Covering the full Cambridge IGCSE and International A-Level physics syllabus, Classes 9–12.</p>
+    </div>
+    <div class="grid-3 fade-in">
+
+      <!-- GCSE / Class 9-10 -->
+      <article class="course-card">
+        <div class="course-head">
+          <div class="course-level level-gcse">IGCSE · Class 9–10</div>
+          <h3>Cambridge IGCSE Physics</h3>
+          <p class="course-sub">Syllabus 0625 / 0972</p>
+        </div>
+        <div class="course-body">
+          <ul class="course-topics" aria-label="Topics covered">
+            <li>Motion, Forces &amp; Energy</li>
+            <li>Thermal Physics</li>
+            <li>Waves, Sound &amp; Light</li>
+            <li>Electricity &amp; Magnetism</li>
+            <li>Nuclear Physics &amp; Radioactivity</li>
+            <li>Space Physics (0972 only)</li>
+          </ul>
+          <div class="course-meta">
+            <span class="course-meta-item">⏱ 2×60 min/week</span>
+            <span class="course-meta-item">👥 Max 6 per group</span>
+            <span class="course-meta-item">📋 Past papers included</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- AS Level Class 11 -->
+      <article class="course-card">
+        <div class="course-head">
+          <div class="course-level level-alevel">AS Level · Class 11</div>
+          <h3>Cambridge AS Physics</h3>
+          <p class="course-sub">Syllabus 9702 — Papers 1, 2 &amp; 3</p>
+        </div>
+        <div class="course-body">
+          <ul class="course-topics" aria-label="Topics covered">
+            <li>Physical Quantities &amp; Measurement</li>
+            <li>Kinematics &amp; Dynamics</li>
+            <li>Work, Energy &amp; Power</li>
+            <li>Electric Current &amp; Circuits</li>
+            <li>Waves &amp; Superposition</li>
+            <li>Practical Skills (Paper 3 prep)</li>
+          </ul>
+          <div class="course-meta">
+            <span class="course-meta-item">⏱ 3×60 min/week</span>
+            <span class="course-meta-item">👥 Max 4 per group</span>
+            <span class="course-meta-item">🔬 Lab demonstrations</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- A2 Level Class 12 -->
+      <article class="course-card">
+        <div class="course-head">
+          <div class="course-level level-alevel">A Level · Class 12</div>
+          <h3>Cambridge A2 Physics</h3>
+          <p class="course-sub">Syllabus 9702 — Papers 4 &amp; 5</p>
+        </div>
+        <div class="course-body">
+          <ul class="course-topics" aria-label="Topics covered">
+            <li>Circular Motion &amp; Gravitational Fields</li>
+            <li>Oscillations &amp; SHM</li>
+            <li>Thermal &amp; Statistical Physics</li>
+            <li>Quantum Physics &amp; Nuclear</li>
+            <li>Electronics &amp; Communications</li>
+            <li>Planning &amp; Analysis (Paper 5)</li>
+          </ul>
+          <div class="course-meta">
+            <span class="course-meta-item">⏱ 3×60 min/week</span>
+            <span class="course-meta-item">👥 1-to-1 or pairs</span>
+            <span class="course-meta-item">🎯 Grade-targeted</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Additional offerings -->
+    <div style="margin-top:2.5rem;" class="fade-in">
+      <h3 style="font-size:1.1rem; font-family:var(--ff-body); font-weight:500; color:var(--ink-2); margin-bottom:1rem;">Also available</h3>
+      <div class="grid-4">
+        <div class="resource-card">
+          <div class="resource-icon">🎯</div>
+          <h4>Exam Crash Courses</h4>
+          <p>4-week intensive revision before Cambridge exams. Past-paper focused.</p>
+        </div>
+        <div class="resource-card">
+          <div class="resource-icon">🔬</div>
+          <h4>Practical Skills Workshops</h4>
+          <p>Paper 3 &amp; 5 lab-skills bootcamps. Online with live demonstrations.</p>
+        </div>
+        <div class="resource-card">
+          <div class="resource-icon">💡</div>
+          <h4>Conceptual Masterclasses</h4>
+          <p>Deep-dive single-topic sessions for students who want to go beyond the syllabus.</p>
+        </div>
+        <div class="resource-card">
+          <div class="resource-icon">👩‍👧</div>
+          <h4>Parent Briefings</h4>
+          <p>Monthly 30-minute sessions explaining syllabus progress and home-support strategies.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Resources / Syllabus ─────────────────────────────── -->
+<section id="resources" class="section" aria-labelledby="resources-heading">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="eyebrow">Syllabus &amp; Resources</div>
+      <h2 id="resources-heading">Free learning materials</h2>
+      <p>Downloadable notes, past papers, formula sheets and lab guides — free for all students.</p>
+    </div>
+    <div class="resource-tabs fade-in" role="tablist" aria-label="Resource categories">
+      <button class="rtab active" onclick="filterResources('all', this)">All Resources</button>
+      <button class="rtab" onclick="filterResources('notes', this)">Lecture Notes</button>
+      <button class="rtab" onclick="filterResources('papers', this)">Past Papers</button>
+      <button class="rtab" onclick="filterResources('lab', this)">Lab Guides</button>
+      <button class="rtab" onclick="filterResources('formula', this)">Formula Sheets</button>
+    </div>
+    <div class="resource-grid fade-in" id="resourceGrid">
+      <div class="resource-card" data-cat="notes">
+        <div class="resource-icon">📝</div>
+        <h4>IGCSE Forces &amp; Motion Notes</h4>
+        <p>Complete annotated notes covering kinematic equations, Newton's laws, and momentum. 28 pages.</p>
+        <span class="download-link">⬇ Download PDF</span>
+      </div>
+      <div class="resource-card" data-cat="notes">
+        <div class="resource-icon">📝</div>
+        <h4>AS Waves &amp; Superposition</h4>
+        <p>Wave properties, standing waves, diffraction, interference with worked examples. 34 pages.</p>
+        <span class="download-link">⬇ Download PDF</span>
+      </div>
+      <div class="resource-card" data-cat="formula">
+        <div class="resource-icon">➕</div>
+        <h4>A-Level Master Formula Sheet</h4>
+        <p>All 9702 equations organised by topic. Printable A3 reference for revision.</p>
+        <span class="download-link">⬇ Download PDF</span>
+      </div>
+      <div class="resource-card" data-cat="papers">
+        <div class="resource-icon">📄</div>
+        <h4>IGCSE Past Paper Pack (2018–23)</h4>
+        <p>Papers 1, 2 &amp; 6 with mark schemes. Organised by topic for targeted practice.</p>
+        <span class="download-link">⬇ Download ZIP</span>
+      </div>
+      <div class="resource-card" data-cat="lab">
+        <div class="resource-icon">🔬</div>
+        <h4>Paper 3 Lab Practical Guide</h4>
+        <p>Step-by-step instructions for 12 common IGCSE experiments. Includes safety notes.</p>
+        <span class="download-link">⬇ Download PDF</span>
+      </div>
+      <div class="resource-card" data-cat="lab">
+        <div class="resource-icon">🧪</div>
+        <h4>A2 Paper 5 Planning Guide</h4>
+        <p>How to structure a planning question. Variables, hypothesis, risk assessment templates.</p>
+        <span class="download-link">⬇ Download PDF</span>
+      </div>
+      <div class="resource-card" data-cat="notes">
+        <div class="resource-icon">⚛️</div>
+        <h4>Nuclear Physics Revision Deck</h4>
+        <p>Flashcard-style notes on radioactive decay, fission, fusion, and binding energy.</p>
+        <span class="download-link">⬇ Download PDF</span>
+      </div>
+      <div class="resource-card" data-cat="formula">
+        <div class="resource-icon">📐</div>
+        <h4>IGCSE Quick-Reference Card</h4>
+        <p>Pocket-sized double-sided formula card for Classes 9–10. Laminate-ready.</p>
+        <span class="download-link">⬇ Download PDF</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Online Classes ────────────────────────────────────── -->
+<section id="online" class="section" aria-labelledby="online-heading">
+  <div class="container">
+    <div class="online-split">
+      <div class="fade-in">
+        <div class="section-header">
+          <div class="eyebrow">Online Classes</div>
+          <h2 id="online-heading">World-class physics, wherever you are</h2>
+          <p>Live, interactive sessions designed for students anywhere in the world. No commute required.</p>
+        </div>
+        <ul class="platform-list">
+          <li>
+            <div class="platform-icon">📹</div>
+            <div>
+              <h4>Live Video Sessions (Zoom / Google Meet)</h4>
+              <p>Interactive whiteboard, screen sharing, real-time Q&amp;A. Sessions are recorded and shared within 24 hours.</p>
+            </div>
+          </li>
+          <li>
+            <div class="platform-icon">📚</div>
+            <div>
+              <h4>Google Classroom</h4>
+              <p>All notes, assignments, and past papers in one organised hub. Accessible on any device.</p>
+            </div>
+          </li>
+          <li>
+            <div class="platform-icon">💬</div>
+            <div>
+              <h4>WhatsApp / Telegram Group</h4>
+              <p>Quick questions answered between sessions. Active Monday–Saturday 8 am–8 pm PKT.</p>
+            </div>
+          </li>
+          <li>
+            <div class="platform-icon">📊</div>
+            <div>
+              <h4>Monthly Progress Reports</h4>
+              <p>Detailed PDF report sent to parents or students covering topic mastery, past-paper scores, and next steps.</p>
+            </div>
+          </li>
+        </ul>
+        <div class="tech-stack">
+          <h4>Technology I use</h4>
+          <div class="tech-pills">
+            <span class="tech-pill">Zoom Pro</span>
+            <span class="tech-pill">Google Classroom</span>
+            <span class="tech-pill">Desmos</span>
+            <span class="tech-pill">PhET Simulations</span>
+            <span class="tech-pill">Quizlet</span>
+            <span class="tech-pill">Padlet</span>
+            <span class="tech-pill">GeoGebra</span>
+            <span class="tech-pill">Kahoot</span>
+          </div>
+        </div>
+      </div>
+      <div class="fade-in">
+        <div class="demo-card" style="margin-bottom:1.5rem;">
+          <div class="trial-badge">FREE</div>
+          <h3>Try a free 45-minute trial class</h3>
+          <p>See my teaching style first-hand. No commitment, no payment required. Available for any topic across IGCSE or A-Level.</p>
+          <a href="#contact" class="demo-btn">Book your free trial →</a>
+        </div>
+        <div class="resource-card" style="margin-bottom:1rem;">
+          <div class="resource-icon">🌍</div>
+          <h4>Time zones I cover</h4>
+          <p>Pakistan (PKT, UTC+5) · UAE (GST, UTC+4) · United Kingdom (GMT/BST) · Saudi Arabia (AST, UTC+3)</p>
+        </div>
+        <div class="resource-card">
+          <div class="resource-icon">💰</div>
+          <h4>Fees &amp; packages</h4>
+          <p>Contact me for current rates. Group discounts available. Sibling discount: 15%. Need-based fee waivers available for Pakistan-based students.</p>
+          <a href="#contact" class="download-link">Enquire about fees →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Schedule ──────────────────────────────────────────── -->
+<section id="schedule" class="section-sm" aria-labelledby="sched-heading">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="eyebrow">Weekly Schedule</div>
+      <h2 id="sched-heading">Available slots (PKT)</h2>
+    </div>
+    <div style="overflow-x:auto;" class="fade-in">
+      <table class="schedule-table" aria-label="Weekly teaching schedule">
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Time (PKT)</th>
+            <th>Course</th>
+            <th>Format</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Monday</td>
+            <td>4:00 – 5:00 pm</td>
+            <td>IGCSE Physics (Class 9–10)</td>
+            <td>Online · Zoom</td>
+            <td><span class="slot-badge slot-open">Open</span></td>
+          </tr>
+          <tr>
+            <td>Monday</td>
+            <td>5:30 – 7:00 pm</td>
+            <td>Cambridge AS Physics (Class 11)</td>
+            <td>In-person · Sargodha</td>
+            <td><span class="slot-badge slot-full">Full</span></td>
+          </tr>
+          <tr>
+            <td>Tuesday</td>
+            <td>3:00 – 4:30 pm</td>
+            <td>A2 Physics (Class 12) — 1-to-1</td>
+            <td>Online · Zoom</td>
+            <td><span class="slot-badge slot-open">Open</span></td>
+          </tr>
+          <tr>
+            <td>Wednesday</td>
+            <td>4:00 – 5:30 pm</td>
+            <td>IGCSE Physics (Class 9–10)</td>
+            <td>Online · Zoom</td>
+            <td><span class="slot-badge slot-online">2 seats left</span></td>
+          </tr>
+          <tr>
+            <td>Thursday</td>
+            <td>5:00 – 6:30 pm</td>
+            <td>Cambridge AS Physics (Class 11)</td>
+            <td>Online · Zoom</td>
+            <td><span class="slot-badge slot-open">Open</span></td>
+          </tr>
+          <tr>
+            <td>Friday</td>
+            <td>3:00 – 4:00 pm</td>
+            <td>Exam Crash Course (all levels)</td>
+            <td>Online · Zoom</td>
+            <td><span class="slot-badge slot-open">Open</span></td>
+          </tr>
+          <tr>
+            <td>Saturday</td>
+            <td>10:00 am – 12:00 pm</td>
+            <td>Paper 3 &amp; 5 Practical Workshop</td>
+            <td>Online · Zoom</td>
+            <td><span class="slot-badge slot-online">3 seats left</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="schedule-note fade-in">
+      ℹ️ Schedule updated for the current academic term. Slots outside these times may be available for 1-to-1 sessions — please contact me to discuss. All times listed in Pakistan Standard Time (PKT, UTC+5).
+    </p>
+  </div>
+</section>
+
+<!-- ── Blog / Articles ───────────────────────────────────── -->
+<section id="blog" class="section" aria-labelledby="blog-heading">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="eyebrow">Articles &amp; Blog</div>
+      <h2 id="blog-heading">Physics explained, clearly</h2>
+      <p>Fortnightly articles for students, parents, and anyone who finds physics fascinating.</p>
+    </div>
+    <div class="grid-3 fade-in">
+
+      <article class="article-card">
+        <div class="article-thumb thumb-waves" aria-hidden="true">🌊</div>
+        <div class="article-body">
+          <div class="article-meta">
+            <span>May 2026</span>
+            <span class="tag tag-blue">Waves</span>
+          </div>
+          <h3>Why do noise-cancelling headphones actually work?</h3>
+          <p>A real-world entry point into superposition and destructive interference — written for IGCSE students.</p>
+          <span class="read-more">Read article →</span>
+        </div>
+      </article>
+
+      <article class="article-card">
+        <div class="article-thumb thumb-atom" aria-hidden="true">⚛️</div>
+        <div class="article-body">
+          <div class="article-meta">
+            <span>April 2026</span>
+            <span class="tag tag-amber">Nuclear</span>
+          </div>
+          <h3>Half-life is not about dying — it's about probability</h3>
+          <p>The single biggest misconception in A-Level nuclear physics, explained with dice and a bit of statistics.</p>
+          <span class="read-more">Read article →</span>
+        </div>
+      </article>
+
+      <article class="article-card">
+        <div class="article-thumb thumb-lab" aria-hidden="true">🧪</div>
+        <div class="article-body">
+          <div class="article-meta">
+            <span>March 2026</span>
+            <span class="tag tag-teal">Practicals</span>
+          </div>
+          <h3>How to score full marks on Cambridge Paper 5 every time</h3>
+          <p>A step-by-step breakdown of the planning essay question: what examiners actually want to see.</p>
+          <span class="read-more">Read article →</span>
+        </div>
+      </article>
+
+    </div>
+    <div style="text-align:center; margin-top:2.5rem;" class="fade-in">
+      <a href="#" class="btn btn-outline">View all articles →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Testimonials ──────────────────────────────────────── -->
+<section id="testimonials" class="section" aria-labelledby="test-heading">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="eyebrow">Testimonials</div>
+      <h2 id="test-heading">What students &amp; parents say</h2>
+    </div>
+    <div class="testimonial-grid fade-in">
+
+      <div class="testimonial-card">
+        <div class="stars" aria-label="5 stars">★★★★★</div>
+        <p class="testimonial-text">"I had failed my mock IGCSE paper twice. After three months with Mr. Adnan, I achieved an A* in my Cambridge exam. His way of connecting every formula to a real situation is unlike anything I'd seen before."</p>
+        <div class="tester-info">
+          <div class="tester-avatar">ZA</div>
+          <div>
+            <div class="tester-name">Zara Ahmed</div>
+            <div class="tester-role">IGCSE Student, Lahore</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars" aria-label="5 stars">★★★★★</div>
+        <p class="testimonial-text">"My son was struggling with AS-Level waves and electricity. Mr. Adnan's online classes were so well-structured — he shared recordings within hours. He scored 89% in his final paper. Genuinely grateful."</p>
+        <div class="tester-info">
+          <div class="tester-avatar">RP</div>
+          <div>
+            <div class="tester-name">Rashid &amp; Parveen M.</div>
+            <div class="tester-role">Parents, Dubai (UAE)</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars" aria-label="5 stars">★★★★★</div>
+        <p class="testimonial-text">"I used Mr. Adnan's free IGCSE notes and past-paper packs while studying in the UK. The quality rivals published textbooks. Remarkable that he makes these available for free."</p>
+        <div class="tester-info">
+          <div class="tester-avatar">HK</div>
+          <div>
+            <div class="tester-name">Hamza Khan</div>
+            <div class="tester-role">IGCSE Student, Manchester</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars" aria-label="5 stars">★★★★★</div>
+        <p class="testimonial-text">"As a colleague, I often refer students who are struggling with nuclear and quantum physics specifically to Mr. Adnan. His content knowledge is outstanding and he explains Paper 5 better than anyone I know."</p>
+        <div class="tester-info">
+          <div class="tester-avatar">SF</div>
+          <div>
+            <div class="tester-name">Sara Farooq</div>
+            <div class="tester-role">A-Level Physics Teacher, Sargodha</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars" aria-label="5 stars">★★★★★</div>
+        <p class="testimonial-text">"The crash course before Cambridge exams was incredibly efficient. Six weeks of targeted past-paper work and I understood exactly which topics needed more time. Went from a predicted C to a confirmed A."</p>
+        <div class="tester-info">
+          <div class="tester-avatar">NU</div>
+          <div>
+            <div class="tester-name">Nadia Usman</div>
+            <div class="tester-role">A2 Student, Karachi</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars" aria-label="4 stars">★★★★☆</div>
+        <p class="testimonial-text">"Clear explanations, excellent resources, always responsive. My daughter's confidence in physics has improved dramatically. Would strongly recommend for any Cambridge student."</p>
+        <div class="tester-info">
+          <div class="tester-avatar">TM</div>
+          <div>
+            <div class="tester-name">Tariq Mehmood</div>
+            <div class="tester-role">Parent, Sargodha</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Contact ───────────────────────────────────────────── -->
+<section id="contact" class="section" aria-labelledby="contact-heading">
+  <div class="container">
+    <div class="contact-split">
+      <div class="fade-in">
+        <div class="section-header">
+          <div class="eyebrow">Get in Touch</div>
+          <h2 id="contact-heading">Book a class or ask a question</h2>
+          <p>I reply to all enquiries within 24 hours (usually much sooner on working days).</p>
+        </div>
+        <ul class="contact-info" aria-label="Contact details">
+          <li>
+            <div class="contact-icon">📧</div>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:adnankhichi909@gmail.com">adnankhichi909@gmail.com</a>
+            </div>
+          </li>
+          <li>
+            <div class="contact-icon">📱</div>
+            <div>
+              <h4>WhatsApp</h4>
+              <a href="https://wa.me/923445991586">+92 344 599 1586</a>
+            </div>
+          </li>
+          <li>
+            <div class="contact-icon">📍</div>
+            <div>
+              <h4>In-person location</h4>
+              <p>Sargodha, Punjab, Pakistan<br><small style="color:var(--ink-3)">Home tuition &amp; private learning centre visits by arrangement</small></p>
+            </div>
+          </li>
+          <li>
+            <div class="contact-icon">🕐</div>
+            <div>
+              <h4>Response hours</h4>
+              <p>Mon–Sat, 8 am – 8 pm PKT</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="fade-in">
+        <form class="contact-form" onsubmit="submitForm(event)" novalidate aria-label="Contact form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First name</label>
+              <input type="text" id="fname" name="fname" placeholder="Fatima" required autocomplete="given-name">
+            </div>
+            <div class="form-group">
+              <label for="lname">Last name</label>
+              <input type="text" id="lname" name="lname" placeholder="Adnan" required autocomplete="family-name">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="role">I am a…</label>
+            <select id="role" name="role">
+              <option value="">Please select</option>
+              <option>Student (Class 9–10)</option>
+              <option>Student (Class 11–12)</option>
+              <option>Parent</option>
+              <option>Colleague / School</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="interest">I'm interested in…</label>
+            <select id="interest" name="interest">
+              <option value="">Please select</option>
+              <option>Free trial class</option>
+              <option>Ongoing weekly classes</option>
+              <option>Exam crash course</option>
+              <option>Resources / materials</option>
+              <option>Collaboration / speaking</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell me a little about your current level, the topics you find difficult, and what you're hoping to achieve…" required></textarea>
+          </div>
+          <button type="submit" class="form-submit" id="submitBtn">Send message →</button>
+          <div id="formSuccess" style="display:none; margin-top:1rem; padding:.9rem 1.2rem; background:rgba(26,122,94,.08); border:1px solid rgba(26,122,94,.2); border-radius:var(--radius-sm); color:var(--accent-3); font-size:.9rem;">
+            ✓ Thank you! Your message has been sent. I'll reply within 24 hours.
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Sitemap ───────────────────────────────────────────── -->
+<section id="sitemap" aria-labelledby="sitemap-heading">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="eyebrow">Site Architecture</div>
+      <h2 id="sitemap-heading">Sitemap</h2>
+      <p>A quick reference to every page and subsection of this portfolio site.</p>
+    </div>
+    <div class="sitemap-tree fade-in" role="list" aria-label="Site structure">
+      <span class="sm-node sm-root">🏠 Home</span>
+      <span class="sm-connector">→</span>
+      <span class="sm-node">👤 About</span>
+      <span class="sm-connector">→</span>
+      <span class="sm-node">💭 Philosophy</span>
+      <span class="sm-connector">→</span>
+      <span class="sm-node">📚 Courses</span>
+      <span class="sm-connector">→</span>
+      <span class="sm-node">📄 Resources</span>
+      <span class="sm-connector">→</span>
+      <span class="sm-node">💻 Online Classes</span>
+      <span class="sm-connector">→</span>
+      <span class="sm-node">🗓 Schedule</span>
+      <span class="sm-connector">→</span>
+      <span class="sm-node">✍ Blog</span>
+      <span class="sm-connector">→</span>
+      <span class="sm-node">⭐ Testimonials</span>
+      <span class="sm-connector">→</span>
+      <span class="sm-node">✉ Contact</span>
+    </div>
+
+    <!-- Content Calendar -->
+    <div style="margin-top:3.5rem;" class="fade-in">
+      <h3 style="font-size:1.25rem; margin-bottom:1.5rem;" id="cal-heading">Content Calendar — 2026</h3>
+      <div class="calendar-grid" role="list" aria-labelledby="cal-heading">
+        <div class="cal-card" role="listitem">
+          <div class="cal-month">January · Feb</div>
+          <h4>Launch &amp; Setup</h4>
+          <p>Site launch · About page · First 3 blog articles · Syllabus resources uploaded</p>
+        </div>
+        <div class="cal-card" role="listitem">
+          <div class="cal-month">March · April</div>
+          <h4>Exam Season Push</h4>
+          <p>Crash course promotion · Paper 3/5 workshop · 2× blog posts on exam technique</p>
+        </div>
+        <div class="cal-card" role="listitem">
+          <div class="cal-month">May · June</div>
+          <h4>Cambridge Exams</h4>
+          <p>Results testimonials collected · Resources updated for new syllabus · Social media campaign</p>
+        </div>
+        <div class="cal-card" role="listitem">
+          <div class="cal-month">July · Aug</div>
+          <h4>Summer Enrolment</h4>
+          <p>New academic year schedule published · Video intro series · Newsletter launch</p>
+        </div>
+        <div class="cal-card" role="listitem">
+          <div class="cal-month">Sep · Oct</div>
+          <h4>New Year Cohort</h4>
+          <p>New student orientation · Monthly blog resumed · Parent briefing videos</p>
+        </div>
+        <div class="cal-card" role="listitem">
+          <div class="cal-month">Nov · Dec</div>
+          <h4>Mock Season</h4>
+          <p>Mock exam resources · Year-in-review blog post · 2027 schedule preview</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── README ────────────────────────────────────────────── -->
+<section id="readme" aria-labelledby="readme-heading">
+  <div class="container">
+    <h2 id="readme-heading">📋 README — Setup &amp; Deployment</h2>
+    <div class="readme-block" role="region" aria-label="Setup instructions">
+<span class="comment"># Muhammad Adnan — Physics Teacher Portfolio
+# BS Physics (Hons) · GCUF 2023 · Punjab College Sillanwali</span>
+
+<span class="key">QUICK START</span>
+<span class="val">  1. Open physics-portfolio.html in any modern browser — it works immediately.</span>
+<span class="val">  2. Replace placeholder content (name, email, photo, statistics) with your own.</span>
+
+<span class="key">CUSTOMISATION</span>
+<span class="val">  • Colours  → Edit CSS variables in :root {} (top of &lt;style&gt; block)</span>
+<span class="val">  • Fonts    → Change Google Fonts @import URL (line 10–12)</span>
+<span class="val">  • Content  → Search for placeholder text (e.g. "03445991586" in email)</span>
+<span class="val">  • Photo    → Replace .avatar-card div with &lt;img&gt; tag pointing to your photo</span>
+
+<span class="key">HOSTING OPTIONS (cheapest first)</span>
+<span class="val">  A. GitHub Pages (free)
+     git init → git add . → git commit -m "init" → push to GitHub
+     Settings → Pages → Source: main branch / root</span>
+
+<span class="val">  B. Netlify (free tier, drag-and-drop)
+     Go to netlify.com → "Add new site" → drag folder → live in 30 seconds</span>
+
+<span class="val">  C. Vercel (free tier)
+     npm i -g vercel → vercel deploy</span>
+
+<span class="val">  D. Traditional cPanel hosting (paid, ~$3/month)
+     Upload via FTP to public_html/index.html</span>
+
+<span class="key">SEO BASICS</span>
+<span class="val">  • Update &lt;meta name="description"&gt; with your name and location</span>
+<span class="val">  • Add &lt;meta property="og:image"&gt; pointing to your profile photo</span>
+<span class="val">  • Submit sitemap.xml to Google Search Console</span>
+<span class="val">  • Register site on Google Business Profile (for local search)</span>
+
+<span class="key">ADDING A CUSTOM DOMAIN</span>
+<span class="val">  1. Buy domain (Namecheap ~$10/yr, or pk.domains for .pk)</span>
+<span class="val">  2. Point DNS CNAME → your-site.netlify.app (or GitHub Pages IP)</span>
+<span class="val">  3. Enable HTTPS (automatic on Netlify/GitHub Pages)</span>
+
+<span class="key">CONTACT FORM (make it functional)</span>
+<span class="val">  Option 1: Formspree.io → replace form action with your Formspree endpoint</span>
+<span class="val">  Option 2: EmailJS → 200 emails/month free, no backend needed</span>
+<span class="val">  Option 3: Google Forms embed as iframe replacement</span>
+
+<span class="key">ACCESSIBILITY CHECKLIST</span>
+<span class="val">  ✓ ARIA labels on nav, sections, tables, forms</span>
+<span class="val">  ✓ Skip-to-content link (add &lt;a href="#home" class="sr-only"&gt;Skip&lt;/a&gt;)</span>
+<span class="val">  ✓ Colour contrast ratio ≥ 4.5:1 on all text</span>
+<span class="val">  ✓ Keyboard-navigable (Tab through all links/buttons)</span>
+<span class="val">  ✓ Alt text on all images (add when you add real photos)</span>
+
+<span class="key">PERFORMANCE</span>
+<span class="val">  • Single HTML file → minimal HTTP requests</span>
+<span class="val">  • Google Fonts preconnect headers included</span>
+<span class="val">  • No JavaScript frameworks → fast parse time</span>
+<span class="val">  • Target: Lighthouse score ≥ 90 on all four metrics</span>
+
+<span class="comment"># Built: May 2026 · Stack: HTML5 + CSS3 + Vanilla JS
+# Licence: Personal use — customise freely for your own portfolio</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ────────────────────────────────────────────── -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo">Muhammad <span>Adnan</span></div>
+        <p>Physics teacher covering Classes 11–12 on the Cambridge syllabus. BS Physics (Hons), GCUF 2023. In-person at Punjab College Sillanwali &amp; online worldwide.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#philosophy">Philosophy</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#resources">Resources</a></li>
+          <li><a href="#online">Online Classes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="#resources">Free Notes</a></li>
+          <li><a href="#resources">Past Papers</a></li>
+          <li><a href="#resources">Formula Sheets</a></li>
+          <li><a href="#blog">Articles</a></li>
+          <li><a href="#schedule">Schedule</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:adnankhichi909@gmail.com">Email</a></li>
+          <li><a href="https://wa.me/923445991586">WhatsApp</a></li>
+          <li><a href="#contact">Contact form</a></li>
+          <li><a href="#contact">Book a trial</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Muhammad Adnan. All rights reserved. Sillanwali, Sargodha, Punjab, Pakistan.</p>
+      <div class="footer-socials" aria-label="Social media links">
+        <a href="#" class="social-btn" aria-label="YouTube">▶</a>
+        <a href="#" class="social-btn" aria-label="LinkedIn">in</a>
+        <a href="#" class="social-btn" aria-label="Twitter / X">𝕏</a>
+        <a href="#" class="social-btn" aria-label="Instagram">◉</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ── JavaScript ─────────────────────────────────────────── -->
+<script>
+  // Mobile nav
+  function toggleMenu() {
+    document.getElementById('mobileNav').classList.toggle('open');
+  }
+
+  // Resource tab filter
+  function filterResources(cat, btn) {
+    document.querySelectorAll('.rtab').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('#resourceGrid .resource-card').forEach(card => {
+      const show = cat === 'all' || card.dataset.cat === cat;
+      card.style.display = show ? 'flex' : 'none';
+      card.style.flexDirection = show ? 'column' : '';
+    });
+  }
+
+  // Contact form simulation
+  function submitForm(e) {
+    e.preventDefault();
+    const btn = document.getElementById('submitBtn');
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+    setTimeout(() => {
+      document.getElementById('formSuccess').style.display = 'block';
+      btn.textContent = '✓ Message sent';
+      btn.style.background = 'var(--accent-3)';
+    }, 1200);
+  }
+
+  // Scroll fade-in animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Active nav highlight on scroll
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(sec => {
+      if (window.scrollY >= sec.offsetTop - 100) current = sec.id;
+    });
+    navLinks.forEach(a => {
+      a.style.color = a.getAttribute('href') === '#' + current ? 'var(--accent)' : '';
+    });
+  }, { passive: true });
+</script>
+
+</body>
+</html>
